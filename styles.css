@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scene {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+#scene1 h1 {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+#scene2 .fox {
+    width: 100px;
+    height: 100px;
+    background: url('fox.png') no-repeat center center;
+    background-size: cover;
+    animation: moveRight 3s ease-in-out forwards;
+}
+
+#scene3 .forest {
+    width: 200px;
+    height: 200px;
+    background: url('forest.png') no-repeat center center;
+    background-size: cover;
+    animation: scaleUp 3s ease-in-out forwards;
+}
+
+#scene4 .owl {
+    width: 100px;
+    height: 100px;
+    background: url('owl.png') no-repeat center center;
+    background-size: cover;
+    animation: rotate 3s ease-in-out forwards;
+}
+
+#scene5 .map {
+    width: 150px;
+    height: 150px;
+    background: url('map.png') no-repeat center center;
+    background-size: cover;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+#scene6 .treasure {
+    width: 150px;
+    height: 150px;
+    background: url('treasure.png') no-repeat center center;
+    background-size: cover;
+    animation: bounce 3s ease-in-out forwards;
+}
+
+#scene7 h1 {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(300px); }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
